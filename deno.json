@@ -1,0 +1,22 @@
+{
+  "name": "@ndtao2020/deno-crc32",
+  "version": "0.1.2",
+  "license": "MIT",
+  "tasks": {
+    "check": "deno run -A jsr:@deno/wasmbuild@0.19.0 --check",
+    "build": "deno run -A jsr:@deno/wasmbuild@0.19.0",
+    "format": "deno fmt",
+    "publish": "deno publish"
+  },
+  "imports": {
+    "@deno/wasmbuild": "jsr:@deno/wasmbuild@^0.19.0"
+  },
+  "exports": "./lib/rust.js",
+  "publish": {
+    "include": [
+      "LICENSE",
+      "README.md",
+      "lib/**/*"
+    ]
+  }
+}

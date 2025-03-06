@@ -1,0 +1,18 @@
+[package]
+name = "rust"
+description = "rust wasm module for deno"
+version = "1.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "=0.2.100"
+crc32c = { version = "0.6.8", default-features = false }
+crc32fast = { version = "1.4.2", default-features = false }
+
+[profile.release]
+opt-level = "s"
+lto = true
